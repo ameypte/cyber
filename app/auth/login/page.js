@@ -1,6 +1,7 @@
 "use client"
 import { React, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
 export default function page() {
@@ -8,6 +9,7 @@ export default function page() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
+    const router = useRouter();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,7 +23,9 @@ export default function page() {
             });
             const data = await res.json();
             if (data.success) {
-                alert("Login successful");           
+                setMessage("");
+                await localStorage.setItem('user', JSON.stringify(data.user));
+                router.push('/');         
             } else {
                 setMessage(data.message);
             }
@@ -44,7 +48,6 @@ export default function page() {
                         </h1>
                         <form class="space-y-4 md:space-y-6" action="#" onSubmit={handleSubmit}>
                             {
-
                                 message && 
                                 <div class="p-4 mb-4 text-sm text-red-600 rounded-lg bg-red-100 dark:text-red-600" role="alert">
                                     <span class="font-medium">{message}</span>

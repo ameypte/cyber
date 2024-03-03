@@ -16,12 +16,11 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
           <Card img={"/img2.jpg"} title={"Phishing Awareness"} />
           <Card img={"/img4.jpg"} title={"Password Security"} />
-          {/* <Card img={"/img2.jpg"} title={"Data Protection"} /> */}
+
           <Card img={"/img6.jpg"} title={"Social Engineering"} />
           <Card img={"/img4.jpg"} title={"Social Engineering"} />
 
           <Card img={"/img6.jpg"} title={"Social Engineering"} />
-
           <Card img={"/img2.jpg"} title={"Social Engineering"} />
         </div>
       </div>

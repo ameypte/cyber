@@ -59,8 +59,8 @@ export default function RootLayout({ children }) {
                 </div>
             </aside>
 
-            <div class="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900">
-                <div class="p-4 mt-14">
+            <div class="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-800">
+                <div class="p-4 mt-20 bg-white rounded-lg dark:bg-gray-900">
                     {children}
                 </div>
             </div>

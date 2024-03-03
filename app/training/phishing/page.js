@@ -18,8 +18,6 @@ export default function page() {
                 <p class="my-3 text-base text-gray-600 dark:text-gray-400">The recipient is then tricked into clicking a malicious link, which can lead to the installation of malware, the freezing of the system as part of a ransomware attack, or the revealing of sensitive information.</p>
             </div>
 
-            {/* common */}
-
             <div class="mb-8" id="common-phishing-attacks">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
                     Common Phishing Attacks <span id="common-phishing-attacks" class="absolute -top-[140px]"></span> <a class="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#common-phishing-attacks" aria-label="Link to this section: Common Phishing Attacks">#</a></h2>
@@ -65,7 +63,6 @@ export default function page() {
 
                 <p class="my-3 text-base text-gray-600 dark:text-gray-400">For more information, visit <a href="https://www.us-cert.gov/ncas/tips/ST04-014" class="text-blue-700 dark:text-blue-500">US-CERT</a>.</p>
             </div>
-
         </>
     )
 }

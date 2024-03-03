@@ -17,10 +17,10 @@ export default function Home() {
           <Card img={"/img2.jpg"} title={"Phishing Awareness"} />
           <Card img={"/img4.jpg"} title={"Password Security"} />
           {/* <Card img={"/img2.jpg"} title={"Data Protection"} /> */}
-          <Card img={"/img2.jpg"} title={"Social Engineering"} />
-          <Card img={"/img2.jpg"} title={"Social Engineering"} />
+          <Card img={"/img6.jpg"} title={"Social Engineering"} />
+          <Card img={"/img4.jpg"} title={"Social Engineering"} />
 
-          <Card img={"/img2.jpg"} title={"Social Engineering"} />
+          <Card img={"/img6.jpg"} title={"Social Engineering"} />
 
           <Card img={"/img2.jpg"} title={"Social Engineering"} />
         </div>

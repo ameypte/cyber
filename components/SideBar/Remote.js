@@ -19,9 +19,7 @@ export default function Remote() {
             class="text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
             size={20}
           />
-          <span class="flex-1 ms-3 whitespace-nowrap">
-            Remote Work Security
-          </span>
+          <span class=" ms-3 whitespace-nowrap">Remote Work Security</span>
         </a>
       </button>
       <ul

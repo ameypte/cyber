@@ -1,0 +1,45 @@
+{
+    "module": "Phishing Awareness",
+    "questions": [
+        {
+            "question": "What is phishing?",
+            "options": [
+                "A. A type of fish",
+                "B. A cybersecurity attack that uses deceptive emails to trick people into revealing sensitive information",
+                "C. A type of computer virus",
+                "D. A secure way to communicate online"
+            ],
+            "answer": "B"
+        },
+        {
+            "question": "Which of the following is a common tactic used in phishing attacks?",
+            "options": [
+                "A. Sending physical letters",
+                "B. Making phone calls",
+                "C. Using deceptive emails",
+                "D. Sending text messages"
+            ],
+            "answer": "C"
+        },
+        {
+            "question": "How can you identify a phishing email?",
+            "options": [
+                "A. By checking the sender's address",
+                "B. By clicking on all links in the email",
+                "C. By downloading all attachments in the email",
+                "D. By replying to the email with personal information"
+            ],
+            "answer": "A"
+        },
+        {
+            "question": "What should you do if you receive a suspected phishing email?",
+            "options": [
+                "A. Click on all links in the email to verify their authenticity",
+                "B. Download all attachments in the email to inspect them",
+                "C. Forward the email to your IT or security team",
+                "D. Reply to the email with your personal information"
+            ],
+            "answer": "C"
+        }
+    ]
+}

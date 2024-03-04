@@ -1,5 +1,6 @@
-import React from "react";
-import StartScreen from "@/components/PhishingQuiz/StartScreen";
+"use client";
+import React, { useState, useReducer } from "react";
+// import StartScreen from "@/components/PhishingQuiz/StartScreen";
 import Question from "@/components/PhishingQuiz/Question";
 const question = {
   questions: [
@@ -147,5 +148,18 @@ const question = {
 };
 
 export default function page() {
-  return <Question question={question.questions[1]} />;
+  // const [{ points, answer, questions, status, index, totalPoints }, dispatch] =
+  const [index, setIndex] = useState(0);
+  const [point, setPoints] = useState(0);
+  const [answer, setAnswer] = useState(null);
+  return (
+    <Question
+      question={question.questions[index]}
+      correctAnswer={question.questions[index].correctOption}
+      answer={null}
+      setAnswer={setAnswer}
+      totalPoints={setPoints}
+      points={question.questions[index].points}
+    />
+  );
 }

@@ -1,12 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-export default function Options({ question, answer, dispatch }) {
-  const [onclick, setOnClick] = useState(null); // Initialized with null
-  console.log(onclick);
+export default function Options({
+  question,
+  answer,
+  totalPoints,
+  points,
+  correctAnswer,
+  setAnswer,
+}) {
   return (
-    <>
-      {/* console.log(onclick); */}
+    <div className="options text-center">
       {question.options.map((option, index) => (
         <button
           className={`btn btn-option ${
@@ -19,12 +23,15 @@ export default function Options({ question, answer, dispatch }) {
               : " "
           }`}
           key={option}
-          disabled={answer !== null}
-          onClick={() => setOnClick(option)}
+          onClick={() =>
+            index == correctAnswer
+              ? totalPoints((preVal) => preVal + points)
+              : null
+          }
         >
           {option}
         </button>
       ))}
-    </>
+    </div>
   );
 }

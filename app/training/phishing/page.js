@@ -46,7 +46,7 @@ export default function page() {
           width="100%"
           height="400"
           src="https://www.youtube.com/embed/XBkzBrXlle0"
-          title="YouTube video player"
+          title="Phishing Video"
           frameborder="0"
           allowfullscreen
         ></iframe>

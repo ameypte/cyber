@@ -1,3 +1,4 @@
+import PhishingNextButton from "@/components/PhishingQuiz/PhishingNextButton";
 import React from "react";
 
 export default function page() {
@@ -146,7 +147,9 @@ export default function page() {
           >
             US-CERT
           </a>
-          .
+          <div className="text-center flex justify-center items-center">
+            <PhishingNextButton />
+          </div>
         </p>
       </div>
     </>

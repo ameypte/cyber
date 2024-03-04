@@ -8,7 +8,12 @@ export default function Options({
   points,
   correctAnswer,
   setAnswer,
+  setCurrentQuestion,
 }) {
+  function ChangeStates(index) {
+    totalPoints((preVal) => preVal + points);
+    setAnswer(() => index);
+  }
   return (
     <div className="options text-center">
       {question.options.map((option, index) => (
@@ -25,8 +30,8 @@ export default function Options({
           key={option}
           onClick={() =>
             index == correctAnswer
-              ? totalPoints((preVal) => preVal + points)
-              : null
+              ? ChangeStates(index)
+              : setAnswer(() => index)
           }
         >
           {option}

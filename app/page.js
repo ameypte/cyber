@@ -14,7 +14,7 @@ export default function Home() {
         <ProgressBar progress={75} />
         <Title />
         <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
-          <Card img={"/img2.jpg"} title={"Phishing Awareness"} />
+          <Card img={"/img2.jpg"} title={"Phishing Awareness"}  link = "/training/phishing" />
           <Card img={"/img4.jpg"} title={"Password Security"} />
 
           <Card img={"/img6.jpg"} title={"Social Engineering"} />

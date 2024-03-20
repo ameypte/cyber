@@ -1,34 +1,74 @@
 "use client";
-import React, { useState, useReducer } from "react";
-// import StartScreen from "@/components/PhishingQuiz/StartScreen";
-import PhisingData from "./phishing.json";
+import React, { useState, useReducer, useEffect } from "react";
+
 import Question from "@/components/PhishingQuiz/Question";
 import NextButton from "@/components/PhishingQuiz/NextQuestion";
-console.log(PhisingData);
-const question = PhisingData;
+import Progress from "@/components/PhishingQuiz/Progress";
+
+import FinishedScreen from "@/components/PhishingQuiz/FinishedScreen";
+
+const PhishingData = require("./phishing.json");
+
 export default function page() {
-  // const [{ points, answer, questions, status, index, totalPoints }, dispatch] =
   const [index, setIndex] = useState(0);
   const [point, setPoints] = useState(0);
   const [answer, setAnswer] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
-  console.log(answer, point, currentQuestion, index);
+  const length = PhishingData?.questions?.length || 0;
+
+  useEffect(() => {
+    if (!PhishingData || !PhishingData.questions) {
+      setError("Phishing data is missing or invalid");
+    }
+  }, []);
+  console.log("Current Question is : ", currentQuestion, "length is ", length);
+  useEffect(() => {
+    if (currentQuestion === length) {
+      setShowModal((prevVal) => !prevVal);
+    }
+  }, [currentQuestion, length]);
   return (
-    <div className="w-full h-screen max-w-screen-xl mx-auto">
-      <Question
-        question={question.questions[currentQuestion]}
-        correctAnswer={question.questions[currentQuestion].correctOption}
-        answer={answer}
-        setAnswer={setAnswer}
-        totalPoints={setPoints}
-        points={question.questions[currentQuestion].points}
-        setCurrentQuestion={setCurrentQuestion}
-      />
-      <NextButton
-        setCurrentQuestion={setCurrentQuestion}
-        setAnswer={setAnswer}
-      />
+    <div className="w-full h-screen max-w-screen-xl m-auto">
+      {!showModal ? (
+        <div>
+          <Progress
+            numQuestion={length}
+            index={currentQuestion}
+            points={point}
+            maxPossibleValue={length}
+            answer={answer}
+          />
+
+          <div style={{ backdropFilter: "inherit" }}>
+            <Question
+              question={PhishingData.questions[currentQuestion]}
+              correctAnswer={
+                PhishingData.questions[currentQuestion].correctOption
+              }
+              answer={answer}
+              setAnswer={setAnswer}
+              totalPoints={setPoints}
+              points={PhishingData.questions[currentQuestion].points}
+              setCurrentQuestion={setCurrentQuestion}
+            />
+            {answer !== null && (
+              <NextButton
+                currentQuestion={currentQuestion}
+                length={length}
+                setShowModal={setShowModal}
+                setCurrentQuestion={setCurrentQuestion}
+                setAnswer={setAnswer}
+              />
+            )}
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {showModal ? <FinishedScreen /> : ""}
     </div>
   );
 }

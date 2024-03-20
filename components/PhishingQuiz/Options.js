@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 
 export default function Options({
@@ -6,36 +7,55 @@ export default function Options({
   answer,
   totalPoints,
   points,
-  correctAnswer,
   setAnswer,
   setCurrentQuestion,
+  transfer,
 }) {
   function ChangeStates(index) {
-    totalPoints((preVal) => preVal + points);
+    totalPoints((preVal) => preVal + 1);
     setAnswer(() => index);
   }
+
   return (
-    <div className="options text-center">
+    <div className="options">
       {question.options.map((option, index) => (
-        <button
-          className={`btn btn-option ${
-            answer !== null && index === question.correctOption ? "answer" : ""
+        <label
+          key={option}
+          className={`radio-option ${
+            answer === null ? "float_right_options" : ""
+          } radio-btn${
+            answer !== null && index === question.correctOption - 1
+              ? "answer"
+              : ""
           } ${
             answer !== null
-              ? index === question.correctOption
+              ? index === question.correctOption - 1
                 ? "correct"
                 : "wrong"
-              : " "
+              : ""
           }`}
-          key={option}
-          onClick={() =>
-            index == correctAnswer
-              ? ChangeStates(index)
-              : setAnswer(() => index)
-          }
         >
+          {console.log(
+            question.question,
+            "Index in Question Component is ",
+            index,
+            question.correctOption,
+            " question is "
+          )}
+          <input
+            type="radio"
+            name="option"
+            style={{ marginRight: "10px" }}
+            checked={answer === index}
+            disabled={answer !== null}
+            onChange={() =>
+              index === question.correctOption - 1
+                ? ChangeStates(index)
+                : setAnswer(() => index)
+            }
+          />
           {option}
-        </button>
+        </label>
       ))}
     </div>
   );

@@ -2,6 +2,7 @@
 import React from "react";
 import { MdPhishing } from "react-icons/md";
 import { useState } from "react";
+import Link from "next/link";
 export default function Phishing() {
   const [showPhishingData, setShowPhishingData] = useState(true);
 
@@ -27,28 +28,20 @@ export default function Phishing() {
         className={`${showPhishingData ? "hidden" : ""} py-2 space-y-2`}
       >
         <li>
-          <a
-            href="#"
+          <Link
+            href="/training/phishing"
             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
-            Products
-          </a>
+            What is Phishing
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            href="/training/phishing/quiz"
             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
-            Billing
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-          >
-            Invoice
-          </a>
+            Quiz
+          </Link>
         </li>
       </ul>
     </li>

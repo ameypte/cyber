@@ -1,7 +1,14 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
-export default function Card({ img, title, description, link = "#"}) {
+export default function Card({
+  img,
+  title,
+  description,
+  link = "#",
+  progress,
+  setProgress,
+}) {
   return (
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <Link

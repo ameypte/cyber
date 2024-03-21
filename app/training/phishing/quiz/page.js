@@ -17,18 +17,26 @@ export default function page() {
   const [showModal, setShowModal] = useState(false);
 
   const length = PhishingData?.questions?.length || 0;
-
+  const ResetQuiz = () => {
+    setCurrentQuestion(() => 0);
+    setAnswer(() => null);
+    setPoints(() => 0);
+    setShowModal(() => false);
+  };
   useEffect(() => {
     if (!PhishingData || !PhishingData.questions) {
       setError("Phishing data is missing or invalid");
     }
   }, []);
-  console.log("Current Question is : ", currentQuestion, "length is ", length);
-  useEffect(() => {
-    if (currentQuestion === length) {
-      setShowModal((prevVal) => !prevVal);
-    }
-  }, [currentQuestion, length]);
+  console.log(
+    "Current Question is : ",
+    currentQuestion,
+    "length is ",
+    length,
+    "SHowModal Value is ",
+    showModal
+  );
+
   return (
     <div className="w-full h-screen max-w-screen-xl m-auto">
       {!showModal ? (
@@ -68,7 +76,11 @@ export default function page() {
         ""
       )}
 
-      {showModal ? <FinishedScreen /> : ""}
+      {showModal ? (
+        <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} />
+      ) : (
+        ""
+      )}
     </div>
   );
 }

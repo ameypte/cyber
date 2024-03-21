@@ -8,14 +8,14 @@ export default function NextButton({
   setAnswer,
 }) {
   function ChangeStates() {
-    if (length == currentQuestion) {
-      setShowModal((prev) => true);
+    if (length === currentQuestion + 1) {
+      setShowModal(true);
     }
     setCurrentQuestion((question) => question + 1);
     setAnswer(() => null);
   }
   return (
-    <button className="btn btn-ui" onClick={() => ChangeStates()}>
+    <button className="btn btn-ui" onClick={ChangeStates}>
       Next
     </button>
   );

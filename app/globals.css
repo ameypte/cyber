@@ -7,8 +7,8 @@
   --color-medium: #ced4da;
   --color-light: #f1f3f5;
 
-  --color-theme: #1098ad;
-  --color-accent: #ffa94d;
+  --color-theme: #84cc16;
+  --color-accent: #dc2626;
 }
 .correct {
   background-color: var(--color-theme);
@@ -44,7 +44,7 @@ progress {
 .wrong {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
-  color: var(--color-darkest);
+  color: var(--color-light);
 }
 .radio-option {
   display: block;
@@ -77,7 +77,14 @@ progress {
   text-align: left;
 }
 
-.radio-option.label:disabled:hover label:disabled,
+.radio-option label:disabled:hover label:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+.float_right_options:hover {
+  transform: translateX(1.2rem);
+}
+.radio-option:hover label:disabled,
 input:disabled {
   cursor: not-allowed;
 }
@@ -103,19 +110,21 @@ input:disabled {
 }
 .radio-option:hover {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  transform: translateX(1.2rem);
-  float: right;
+  /* transform: translateX(1.2rem); */
+  /* float: right; */
 }
 
 .radio-option.correct {
+  transform: translateX(1.2rem);
+
   background-color: var(--color-theme);
   border: 2px solid var(--color-theme);
-  color: var(--color-light);
+  color: var(--color-darkest);
 }
 .radio-option.wrong {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
-  color: var(--color-darkest);
+  color: var(--color-light);
 }
 
 .btn-ui {

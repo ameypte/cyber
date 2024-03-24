@@ -1,29 +1,25 @@
-"use client";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Options({
   question,
   answer,
   totalPoints,
-  points,
   setAnswer,
   setCurrentQuestion,
-  transfer,
 }) {
   function ChangeStates(index) {
     totalPoints((preVal) => preVal + 1);
-    setAnswer(() => index);
+    setAnswer(index);
   }
 
   return (
-    <div className="options">
+    <div className={`options `}>
       {question.options.map((option, index) => (
         <label
           key={option}
           className={`radio-option ${
             answer === null ? "float_right_options" : ""
-          } radio-btn${
+          } radio-btn ${
             answer !== null && index === question.correctOption - 1
               ? "answer"
               : ""

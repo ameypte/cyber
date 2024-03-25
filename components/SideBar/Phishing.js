@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { MdPhishing } from "react-icons/md";
+// import { MdOutlineQuiz } from "react-icons/md";
 import { useState } from "react";
 import Link from "next/link";
 export default function Phishing() {

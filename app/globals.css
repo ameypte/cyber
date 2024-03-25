@@ -72,6 +72,18 @@ progress {
   border-radius: 100px;
   transition: 0.3s;
 }
+.btn2 {
+  display: block;
+  font-family: inherit;
+  color: white;
+  font-size: 1rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
 .btn-option {
   width: 100%;
   text-align: left;

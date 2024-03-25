@@ -25,7 +25,7 @@ export default function FinishedScreen({ ResetQuiz, correct = 0, length = 4 }) {
         </div>
       )}
       {correct < length / 2 ? (
-        <button className="btn btn-ui" onClick={ResetQuiz}>
+        <button className="btn2 btn-ui" onClick={ResetQuiz}>
           Restart Quiz
         </button>
       ) : (

@@ -7,7 +7,7 @@ import Progress from "@/components/PhishingQuiz/Progress";
 
 import FinishedScreen from "@/components/PhishingQuiz/FinishedScreen";
 // const [loading, setLoading] = useState(false);
-const PasswordSecurity = require("./passsecurity.json");
+const RemoteWork = require("./remote-work.json");
 
 export default function page() {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,8 @@ export default function page() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
-  const length = PasswordSecurity?.questions?.length || 0;
+  const length = RemoteWork?.questions?.length || 0;
+
   const ResetQuiz = () => {
     setCurrentQuestion(() => 0);
     setAnswer(() => null);
@@ -24,7 +25,7 @@ export default function page() {
     setShowModal(() => false);
   };
   useEffect(() => {
-    if (!PasswordSecurity || !PasswordSecurity.questions) {
+    if (!RemoteWork || !RemoteWork.questions) {
       setError("Phishing data is missing or invalid");
     }
   }, []);
@@ -51,14 +52,14 @@ export default function page() {
 
           <div style={{ backdropFilter: "inherit" }}>
             <Question
-              question={PasswordSecurity.questions[currentQuestion]}
+              question={RemoteWork.questions[currentQuestion]}
               correctAnswer={
-                PasswordSecurity.questions[currentQuestion].correctOption
+                RemoteWork.questions[currentQuestion].correctOption
               }
               answer={answer}
               setAnswer={setAnswer}
               totalPoints={setPoints}
-              points={PasswordSecurity.questions[currentQuestion].points}
+              points={RemoteWork.questions[currentQuestion].points}
               setCurrentQuestion={setCurrentQuestion}
             />
             {answer !== null && (

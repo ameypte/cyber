@@ -1,0 +1,49 @@
+{
+  "module": "Password Security",
+  "questions": [
+    {
+      "question": "What is the purpose of a strong password?",
+      "options": [
+        "A. To make it easier to remember",
+        "B. To protect your accounts from unauthorized access",
+        "C. To share it with others for convenience",
+        "D. To make it shorter and simpler"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is a characteristic of a strong password?",
+      "options": [
+        "A. Contains personal information like your name or date of birth",
+        "B. Is a common word or phrase found in the dictionary",
+        "C. Uses a combination of uppercase and lowercase letters, numbers, and symbols",
+        "D. Is the same password used for multiple accounts"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "How often should you change your passwords?",
+      "options": [
+        "A. Never, once set they can remain the same",
+        "B. Once a year or when there is a security breach",
+        "C. Every few months",
+        "D. Every time you log in"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is a recommended practice for managing passwords?",
+      "options": [
+        "A. Use the same password for all your accounts",
+        "B. Write down your passwords and keep them in a secure location",
+        "C. Share your passwords with trusted friends or family members",
+        "D. Use a password manager to securely store and generate unique passwords"
+      ],
+      "correctOption": 4,
+      "points": 20
+    }
+  ]
+}

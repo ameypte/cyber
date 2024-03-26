@@ -1,0 +1,49 @@
+{
+  "module": "Social Engineering",
+  "questions": [
+    {
+      "question": "What is social engineering?",
+      "options": [
+        "A. A type of fishing technique",
+        "B. A method of manipulating people into revealing sensitive information or performing actions that compromise security",
+        "C. A type of computer virus",
+        "D. A secure way to communicate online"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is a common tactic used in social engineering attacks?",
+      "options": [
+        "A. Sending physical letters",
+        "B. Making phone calls with a pretext",
+        "C. Using deceptive emails",
+        "D. All of the above"
+      ],
+      "correctOption": 4,
+      "points": 20
+    },
+    {
+      "question": "How can you identify a potential social engineering attempt?",
+      "options": [
+        "A. The request creates a sense of urgency or fear",
+        "B. The request comes from an unknown or suspicious source",
+        "C. The request asks for sensitive information or privileged access",
+        "D. All of the above"
+      ],
+      "correctOption": 4,
+      "points": 20
+    },
+    {
+      "question": "What should you do if you suspect a social engineering attack?",
+      "options": [
+        "A. Comply with the request to avoid conflict",
+        "B. Verify the identity and authority of the requester",
+        "C. Disclose the requested information or perform the requested action",
+        "D. Ignore the request and do nothing"
+      ],
+      "correctOption": 2,
+      "points": 20
+    }
+  ]
+}

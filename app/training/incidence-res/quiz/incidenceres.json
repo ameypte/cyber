@@ -1,0 +1,49 @@
+{
+  "module": "Incident Response",
+  "questions": [
+    {
+      "question": "What is incident response?",
+      "options": [
+        "A. The process of creating data backups",
+        "B. The process of identifying, analyzing, and responding to security incidents or cyberattacks",
+        "C. The process of updating software",
+        "D. The process of sharing data with third parties"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is a best practice for effective incident response?",
+      "options": [
+        "A. Ignoring security incidents",
+        "B. Developing an incident response plan",
+        "C. Sharing sensitive information publicly",
+        "D. Delaying incident response activities"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the first step in the incident response process?",
+      "options": [
+        "A. Containment",
+        "B. Eradication",
+        "C. Identification",
+        "D. Recovery"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What should be done after a security incident has been resolved?",
+      "options": [
+        "A. Ignore it and move on",
+        "B. Conduct a post-incident review and implement preventive measures",
+        "C. Share details of the incident publicly",
+        "D. Delete all incident-related logs and records"
+      ],
+      "correctOption": 2,
+      "points": 20
+    }
+  ]
+}

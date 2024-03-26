@@ -5,7 +5,7 @@ export default function Card({
   img,
   title,
   description,
-  link = "#",
+  link ,
   progress,
   setProgress,
 }) {

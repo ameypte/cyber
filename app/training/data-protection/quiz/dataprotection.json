@@ -1,0 +1,49 @@
+{
+  "module": "Data Protection",
+  "questions": [
+    {
+      "question": "What is data protection?",
+      "options": [
+        "A. Storing data in physical files",
+        "B. Safeguarding sensitive information from unauthorized access and data breaches",
+        "C. Deleting all data from a computer",
+        "D. Sharing data with everyone online"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is a best practice for data protection?",
+      "options": [
+        "A. Sharing passwords with colleagues",
+        "B. Using strong, unique passwords for each account",
+        "C. Storing all data on a public server",
+        "D. Ignoring software updates"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How can you protect sensitive data on a public Wi-Fi network?",
+      "options": [
+        "A. Avoiding any online activities",
+        "B. Using a VPN (Virtual Private Network)",
+        "C. Sharing all personal data openly",
+        "D. Disabling all security settings"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What should you do if you suspect a data breach?",
+      "options": [
+        "A. Ignore it and hope for the best",
+        "B. Immediately inform the appropriate authorities or IT department",
+        "C. Share the information on social media",
+        "D. Delete all related files and logs"
+      ],
+      "correctOption": 1,
+      "points": 20
+    }
+  ]
+}

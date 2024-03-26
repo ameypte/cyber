@@ -1,0 +1,74 @@
+{
+    "emails": [
+        {
+            "type": "genuine",
+            "sender": "noreply@linkedin.com",
+            "subject": "Your Weekly LinkedIn Digest",
+            "body": "Hello <strong>Amey Pathe</strong>, </br>Here's your weekly digest from LinkedIn. </br> Stay updated with the latest news and activities in your professional network. </br> Best regards, LinkedIn Team",
+            "date": "2023-10-02"
+        },
+        {
+            "type": "suspicious",
+            "sender": "noreply@micro.net",
+            "subject": "Action Required: Update Your Account Information",
+            "body": "Dear Microsoft User, </br>Our records indicate that your account information is outdated. </br> To continue using our services without interruption, please update your information by clicking on the link below. </br> https://www.micro-craft.net/update </br> Microsoft Support Team",
+            "date": "2023-10-10"
+        },
+        {
+            "type": "genuine",
+            "sender": "updates@apple.com",
+            "subject": "Your Apple Product Warranty Information",
+            "body": "Dear Customer, </br>We want to ensure you have all the information you need about your Apple product warranty. </br> Please find attached the warranty details for your recent purchase. </br> If you have any questions, feel free to reach out to us. </br> Regards, Apple Support",
+            "date": "2023-10-04"
+        },
+        {
+            "type": "genuine",
+            "sender": "service@booking.com",
+            "subject": "Rate Your Recent Stay",
+            "body": "Hello <strong>Bhavesh Patil</strong>, </br>We hope you had a pleasant stay at Example Hotel. </br> Please take a moment to rate your experience and help us improve our services. </br> Your feedback is highly appreciated. </br> Best regards, Booking.com Team",
+            "date": "2023-10-05"
+        },
+        {
+            "type": "suspicious",
+            "sender": "security@gmail.com",
+            "subject": "Account Security Alert: Unauthorized Login Attempt",
+            "body": "Dear PayPal User, </br>Our system has detected a login attempt from an unrecognized device. </br> To secure your account, please click on the link below and verify your identity. </br> https://www.fake-paypal.com/security </br> Regards, PayPal Security Team",
+            "date": "2023-10-06"
+        },
+        {
+            "type": "genuine",
+            "sender": "noreply@bankofamerica.com",
+            "subject": "Reminder: Pay Your Credit Card Bill",
+            "body": "Dear <strong>Pratik Dhame</strong>, </br>This is a friendly reminder to pay your credit card bill. </br> To avoid late fees, please make your payment by the due date. </br> Thank you for choosing Bank of America. </br> Sincerely, Bank of America",
+            "date": "2023-10-03"
+        },
+        {
+            "type": "suspicious",
+            "sender": "verification@rediffmail.com",
+            "subject": "Immediate Action Required: Verify Your Apple ID",
+            "body": "Dear Apple User, </br>Your Apple ID requires immediate verification due to recent security concerns. </br> Failure to verify your identity may result in account suspension. </br> Click on the link below to proceed. </br> https://www.appple.net/verify </br> Apple Support Team",
+            "date": "2023-10-07"
+        },
+        {
+            "type": "suspicious",
+            "sender": "security@gmail.com",
+            "subject": "Suspicious Activity Detected: Confirm Your Identity",
+            "body": "Dear Amazon Customer, </br>Our system has flagged suspicious activity on your account. </br> To prevent unauthorized access, please confirm your identity by clicking on the link below. </br> https://www.atoz.com/confirm </br> Amazon Security Team",
+            "date": "2023-10-08"
+        },
+        {
+            "type": "suspicious",
+            "sender": "refund@bny.org",
+            "subject": "IRS Tax Refund Notification",
+            "body": "Dear Taxpayer, </br>Congratulations! You are eligible to receive a tax refund from the IRS. </br> To expedite the process, please provide your personal and banking details by clicking on the link below. </br> https://www.irs.io/refund </br> Sincerely, IRS",
+            "date": "2023-10-09"
+        },
+        {
+            "typw": "genuine",
+            "sender": "service@paypal.com",
+            "subject": "Your Monthly Statement",
+            "body": "Dear <strong>Soham Borkar</strong>, </br>Your monthly statement is now available. </br> You can view and download your statement by logging into your PayPal account. </br> If you have any questions, please don't hesitate to contact us. </br> Regards, PayPal Team",
+            "date": "2023-10-01"
+        }
+    ]
+}

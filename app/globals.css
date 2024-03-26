@@ -7,8 +7,8 @@
   --color-medium: #ced4da;
   --color-light: #f1f3f5;
 
-  --color-theme: #84cc16;
-  --color-accent: #dc2626;
+  --color-theme: #16a34a;
+  --color-accent: #ef4444;
 }
 .correct {
   background-color: var(--color-theme);

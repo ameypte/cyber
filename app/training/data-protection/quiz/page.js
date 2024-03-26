@@ -29,6 +29,14 @@ export default function page() {
       setError("Phishing data is missing or invalid");
     }
   }, []);
+  console.log(
+    "Current Question is : ",
+    currentQuestion,
+    "length is ",
+    length,
+    "SHowModal Value is ",
+    showModal
+  );
 
   return (
     <div className="w-full h-screen max-w-screen-xl m-auto">

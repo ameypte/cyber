@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function FinishedScreen({ ResetQuiz, correct = 0, length = 4 }) {
   const [restartQuiz, setRestartQuiz] = useState(false);
+  useEffect(async()=>{
+    
+  },[])
   return (
     <div className={`result-modal `}>
       <p className="result text-center w-75 bg-orange-500">

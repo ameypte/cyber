@@ -1,27 +1,23 @@
 import { NextResponse } from "next/server";
-import mongoose from "mongoose";
-import { conStr } from "@/utils/db";
-import { Users } from "@/utils/models/user";
+// import { query } from "@/app/lib/db";
+import { query } from "@/lib/db";
+export const POST = async (req, res) => {
+  const data = await req.json();
 
+  console.log(data);
+  const username = data.email;
+  const password = data.password;
 
-export async function POST(req) {
-    try {
-        const { email, password } = await req.json();
-        console.log(email + " " + password);
-        await mongoose.connect(conStr);
+  const user = await query({
+    query: "select * from user where email = ? and password = ?",
+    values: [username, password],
+  });
 
-        const user = await Users.findOne({ email, password});
-
-        console.log (user);
-
-        if (!user) {
-            return NextResponse.json({ message: "Invalid Username or Password" , success: false });
-        }
-
-        return NextResponse.json({ user, success: true });
-
-    } catch (error) {
-        return NextResponse.json({ message: "An error occurred" , success: false });
-    }
-
-}
+  if (user.length > 0) {
+    return NextResponse.json({ user: user }, { status: 200 });
+  }
+  return NextResponse.json(
+    { message: "Invalid uername or password" },
+    { status: 400 }
+  );
+};

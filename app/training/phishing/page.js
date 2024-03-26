@@ -139,7 +139,7 @@ export default function page() {
           <li>Use multi-factor authentication</li>
         </ul>
 
-        <p class="my-3 text-base text-gray-600 dark:text-gray-400">
+        <div class="my-3 text-base text-gray-600 dark:text-gray-400">
           For more information, visit{" "}
           <a
             href="https://www.us-cert.gov/ncas/tips/ST04-014"
@@ -150,7 +150,7 @@ export default function page() {
           <div className="text-center flex justify-center items-center">
             <PhishingNextButton />
           </div>
-        </p>
+        </div>
       </div>
     </>
   );

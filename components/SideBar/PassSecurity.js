@@ -2,6 +2,7 @@
 import React from "react";
 import { PiPasswordFill } from "react-icons/pi";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function PassSecurity() {
   const [showPassData, setShowPassData] = useState(true);
@@ -28,27 +29,35 @@ export default function PassSecurity() {
         className={`${showPassData ? "hidden" : ""} py-2 space-y-2`}
       >
         <li>
-          <a
-            href="#"
+          <Link
+            href="/training/pass-security"
             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
-            Products
+            Artical
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/training/pass-security/quiz"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+          >
+            Quiz
+          </Link>
+        </li>
+        <li>
+          <a
+            href="/training/pass-security/password-generator"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+          >
+            Password Generator
           </a>
         </li>
         <li>
           <a
-            href="#"
+            href="/training/pass-security/password-health"
             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
-            Billing
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-          >
-            Invoice
+            Password Health
           </a>
         </li>
       </ul>

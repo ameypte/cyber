@@ -20,13 +20,13 @@ export default function Home() {
             title={"Phishing Awareness"}
             link="/training/phishing"
           />
-          <Card img={"/img4.jpg"} title={"Password Security"} />
+          <Card img={"/img4.jpg"} title={"Password Security"} link="/training/password" />
 
-          <Card img={"/img6.jpg"} title={"Social Engineering"} />
-          <Card img={"/dataprotection.jpg"} title={"Data Protection"} />
+          <Card img={"/img6.jpg"} title={"Social Engineering"} link="/training/social" />
+          <Card img={"/dataprotection.jpg"} title={"Data Protection"} link="/training/data" />
 
-          <Card img={"/incidence.jpg"} title={"Incidence Response"} />
-          <Card img={"/remote.jpg"} title={"Remote Work Security"} />
+          <Card img={"/incidence.jpg"} title={"Incidence Response"} link="/training/incidence" />
+          <Card img={"/remote.jpg"} title={"Remote Work Security"} link="/training/remote" />
         </div>
       </div>
 

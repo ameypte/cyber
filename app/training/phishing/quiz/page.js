@@ -1,12 +1,12 @@
 "use client";
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState, useReducer, useEffect, useRouter } from "react";
 
 import Question from "@/components/PhishingQuiz/Question";
 import NextButton from "@/components/PhishingQuiz/NextQuestion";
 import Progress from "@/components/PhishingQuiz/Progress";
 
 import FinishedScreen from "@/components/PhishingQuiz/FinishedScreen";
-
+// const [loading, setLoading] = useState(false);
 const PhishingData = require("./phishing.json");
 
 export default function page() {
@@ -17,6 +17,36 @@ export default function page() {
   const [showModal, setShowModal] = useState(false);
 
   const length = PhishingData?.questions?.length || 0;
+  const [phishingQuizData, setPhishingQuizData] = useState([]);
+  const [message, setMessage] = useState("");
+  // const router = useRouter();
+  console.log(phishingQuizData, "Got THe Phishing Data");
+  console.log(message, "Got MEssage");
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/phishingquiz", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await res.json();
+        console.log(data);
+        if (data.success) {
+          setMessage("");
+          setPhishingQuizData(data.data);
+        } else {
+          setMessage("Failed to fetch data from MongoDB Atlas");
+        }
+      } catch (error) {
+        setMessage("An error occurred");
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const ResetQuiz = () => {
     setCurrentQuestion(() => 0);
     setAnswer(() => null);

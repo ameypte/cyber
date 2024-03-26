@@ -1,30 +1,26 @@
 import { NextResponse } from "next/server";
-import mongoose from "mongoose";
-import { conStr } from "@/utils/db";
-import { Users } from "@/utils/models/user";
+import { query } from "@/lib/db";
 
-export async function GET() {
-    let data = [];
-    try {
-        await mongoose.connect(conStr);
-        data = await Users.find();
-    } catch (error) {
-        data = { success: false }
-    }
-    return NextResponse.json({ data, success: true });
-}
+export const POST = async (req, res) => {
+  let message, status;
 
-export async function POST(req) {
-    try {
-        const data = await req.json();
-        await mongoose.connect(conStr);
-        let user = new Users(data);
-        console.log(user);
-        await user.save();
-        
-        return NextResponse.json({ user, success: true });
+  const data = await req.json();
+  console.log(data);
+  const username = data.name;
+  const password = data.password;
+  const email = data.email;
+  console.log(username, password, email);
+  const user = await query({
+    query: "INSERT INTO `user`(`name`, `email`, `password`) VALUES (?,?,?)",
+    values: [username, email, password],
+  });
 
-    } catch (error) {
-        return NextResponse.json({ success: false });
-    }
-}
+  if (user.error) {
+    message = "Something went wrong";
+    status = 500;
+  } else {
+    message = "user added successfully";
+    status = 201;
+  }
+  return NextResponse.json({ message: message }, { status: status });
+};

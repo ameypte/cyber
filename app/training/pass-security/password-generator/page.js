@@ -72,7 +72,7 @@ export default function PassGene() {
     };
 
     return (
-        <>
+        <div className="container my-4 px-5 py-4 w-50 rounded shadow bg-body-tertiary dark:bg-body-secondary">
             <div class="pb-4 mb-8 border-b border-gray-200 dark:border-gray-800">
                 <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
                     Password Generator
@@ -190,6 +190,6 @@ export default function PassGene() {
                     >Generate Password</button>
                 </div>
             </form>
-        </>
+        </div>
     );
 }

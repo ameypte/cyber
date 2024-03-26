@@ -6,7 +6,9 @@ export default function NavBar() {
   const [username, setUsername] = useState(null);
   if (localStorage.getItem("name")) {
     useEffect(() => {
-      setUsername(localStorage.getItem("name").split(" ")[0]);
+      if (localStorage.getItem("name")) {
+        setUsername(localStorage.getItem("name").split(" ")[0]);
+      }
     }, []);
   }
 

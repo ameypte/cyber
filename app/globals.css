@@ -149,3 +149,9 @@ input:disabled {
   gap: 1rem;
   margin-bottom: 2rem;
 }
+
+.password-strength-bar {
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

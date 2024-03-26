@@ -1,0 +1,49 @@
+{
+  "module": "Remote Work Security",
+  "questions": [
+    {
+      "question": "What is remote work security?",
+      "options": [
+        "A. Practices and policies for securing office buildings",
+        "B. Practices, policies, and technologies implemented to ensure security and privacy when working remotely",
+        "C. The process of creating data backups",
+        "D. The process of sharing data with third parties"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is a common security risk associated with remote work?",
+      "options": [
+        "A. Using a virtual private network (VPN)",
+        "B. Enabling multi-factor authentication",
+        "C. Unsecured Wi-Fi networks",
+        "D. Keeping software and applications up-to-date"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What is a best practice for ensuring remote work security?",
+      "options": [
+        "A. Using personal devices without any security measures",
+        "B. Sharing sensitive information over unsecured channels",
+        "C. Implementing secure file-sharing and collaboration tools",
+        "D. Ignoring software and application updates"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What should remote work security policies cover?",
+      "options": [
+        "A. Procedures for sharing personal information publicly",
+        "B. Acceptable use of company resources and data handling requirements",
+        "C. Guidelines for ignoring security incidents",
+        "D. Instructions for disabling security features on personal devices"
+      ],
+      "correctOption": 2,
+      "points": 20
+    }
+  ]
+}

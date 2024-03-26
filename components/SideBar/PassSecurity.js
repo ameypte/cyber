@@ -38,14 +38,6 @@ export default function PassSecurity() {
         </li>
         <li>
           <Link
-            href="/training/pass-security/quiz"
-            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-          >
-            Quiz
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/training/pass-security/password-generator"
             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
@@ -58,6 +50,14 @@ export default function PassSecurity() {
             class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
             Password Health
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/training/pass-security/quiz"
+            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+          >
+            Quiz
           </Link>
         </li>
       </ul>

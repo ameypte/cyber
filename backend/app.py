@@ -26,9 +26,9 @@ def generate_certificate_api():
     if len(name) <= 3:
         return jsonify({'error': "Name Size Should be More to Generate Certificate"}), 400
 
+    name2="Certificate"
     generate_certificate(name=name)
-    
-    absolute_path = os.path.join(app.root_path, 'data', f'{name}.png')
+    absolute_path = os.path.join(app.root_path, 'data', f'certificate.png')
     
     if os.path.exists(absolute_path):
         response = send_file(absolute_path, as_attachment=True)

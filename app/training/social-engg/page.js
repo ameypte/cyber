@@ -1,13 +1,18 @@
 // import SocialEngineeringNextButton from "@/components/SocialEngineeringQuiz/SocialEngineeringNextButton";
+import ModuleStatus from "@/components/ModuleStatus";
 import React from "react";
 
 export default function page() {
   return (
     <>
       <div className="pb-4 mb-8 border-b border-gray-200 dark:border-gray-800">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-          Social Engineering
-        </h1>
+        <div className="flex justify-between items-center">
+
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            Social Engineering
+          </h1>
+          <ModuleStatus module={"Social Engineering"} />
+        </div>
         <p className="my-3 text-base text-gray-600 dark:text-gray-400">
           Let's learn about social engineering and how to protect yourself from
           social engineering attacks.

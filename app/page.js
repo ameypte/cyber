@@ -6,8 +6,8 @@ import IntoBanner from "@/components/IntroBanner";
 import NavBar from "@/components/NavBar";
 import ProgressBar from "@/components/ProgressBar";
 import Title from "@/components/Title";
-
 import { useState, useEffect } from "react";
+
 export default function Home() {
   const [username, setUsername] = useState(null);
   const [progress, setProgress] = useState(100);
@@ -40,34 +40,33 @@ export default function Home() {
           <Card
             img={"/img2.jpg"}
             title={"Phishing Awareness"}
-            link="/training/phishing"
+            link={isLogged ? "/training/phishing" : "/login"}
           />
           <Card
             img={"/img4.jpg"}
             title={"Password Security"}
-            link="/training/password"
+            link={isLogged ? "/training/password" : "/login"}
           />
-
           <Card
             img={"/img6.jpg"}
             title={"Social Engineering"}
-            link="/training/social"
+            link={isLogged ? "/training/social" : "/login"}
           />
           <Card
             img={"/dataprotection.jpg"}
             title={"Data Protection"}
-            link="/training/data"
+            link={isLogged ? "/training/data" : "/login"}
           />
 
           <Card
             img={"/incidence.jpg"}
             title={"Incidence Response"}
-            link="/training/incidence"
+            link={isLogged ? "/training/incidence" : "/login"}
           />
           <Card
             img={"/remote.jpg"}
             title={"Remote Work Security"}
-            link="/training/remote"
+            link={isLogged ? "/training/remote" : "/login"}
           />
         </div>
       </div>

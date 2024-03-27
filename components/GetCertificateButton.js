@@ -30,7 +30,7 @@ export default function GetCertificateButton(name) {
       reader.onload = function () {
         const link = document.createElement("a");
         link.href = reader.result;
-        link.download = "certificate.pdf"; // Set suggested filename
+        link.download = "certificate.png"; // Set suggested filename
         link.click();
       };
       reader.readAsDataURL(blob);

@@ -31,7 +31,10 @@ def generate_certificate_api():
     absolute_path = os.path.join(app.root_path, 'data', f'certificate.png')
     
     if os.path.exists(absolute_path):
-        response = send_file(absolute_path, as_attachment=True)
+        response = send_file(absolute_path,mimetype='image/png', as_attachment=True)
+        #download as png file
+        # response.headers["Content-Disposition"] = "attachment; filename=certificate.png"
+        
          # Remove the file after sending
         return response
     else:

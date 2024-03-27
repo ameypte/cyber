@@ -15,6 +15,7 @@ export default function page() {
   const [answer, setAnswer] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [user_id, setUser_id] = useState(null);
 
   const length = RemoteWork?.questions?.length || 0;
 
@@ -25,6 +26,8 @@ export default function page() {
     setShowModal(() => false);
   };
   useEffect(() => {
+    setUser_id(localStorage.getItem("user_id"));
+
     if (!RemoteWork || !RemoteWork.questions) {
       setError("Phishing data is missing or invalid");
     }
@@ -78,7 +81,9 @@ export default function page() {
       )}
 
       {showModal ? (
-        <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} />
+        <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} module="Remote Work"
+          userId={user_id}
+        />
       ) : (
         ""
       )}

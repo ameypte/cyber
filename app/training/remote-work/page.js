@@ -1,12 +1,16 @@
+import ModuleStatus from "@/components/ModuleStatus";
 import React from "react";
 
 export default function page() {
   return (
     <>
       <div className="pb-4 mb-8 border-b border-gray-200 dark:border-gray-800">
+        <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
           Remote Work Security
         </h1>
+        <ModuleStatus module={"Remote Work"} />
+        </div>
         <p className="my-3 text-base text-gray-600 dark:text-gray-400">
           Let's learn about remote work security and how to protect your
           devices, data, and communications when working remotely.

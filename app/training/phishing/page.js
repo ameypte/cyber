@@ -1,3 +1,4 @@
+import ModuleStatus from "@/components/ModuleStatus";
 import PhishingNextButton from "@/components/PhishingQuiz/PhishingNextButton";
 import React from "react";
 
@@ -5,9 +6,15 @@ export default function page() {
   return (
     <>
       <div class="pb-4 mb-8 border-b border-gray-200 dark:border-gray-800">
-        <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
-          Phishing Awareness
-        </h1>
+        <div className="flex justify-between items-center">
+          <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            Phishing Awareness
+          </h1>
+
+          <ModuleStatus module={"phishing"} />
+
+        </div>
+
         <p class="my-3 text-base text-gray-600 dark:text-gray-400">
           Let's learn about phishing and how to protect yourself from phishing
           attacks.

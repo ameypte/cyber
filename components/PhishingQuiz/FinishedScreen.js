@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export default function FinishedScreen({ ResetQuiz, correct, length }) {
+export default function FinishedScreen({ ResetQuiz, correct, length,
+  module, userId
+}) {
 
   const storeScore = async () => {
     const data = {
-      user_id: 1,
-      module: "Phishing",
+      user_id: userId,
+      module: module,
       total: length,
       correct: correct,
     };

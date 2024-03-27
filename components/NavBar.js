@@ -6,18 +6,17 @@ export default function NavBar() {
   const [username, setUsername] = useState(null);
   const [isLogged, setIsLogged] = useState(false);
 
-  if (localStorage.getItem("name")) {
-    useEffect(() => {
-      if (localStorage.getItem("name")) {
-        setUsername(() => localStorage.getItem("name"));
-        setIsLogged(() => true);
-      }
-      else {
-        setUsername(() => null);
-        setIsLogged(() => false);
-      }
-    }, []);
-  }
+  useEffect(() => {
+    if (localStorage.getItem("name")) {
+      setUsername(() => localStorage.getItem("name"));
+      setIsLogged(() => true);
+    }
+    else {
+      setUsername(() => null);
+      setIsLogged(() => false);
+    }
+  }, []);
+
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">

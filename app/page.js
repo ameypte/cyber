@@ -9,11 +9,14 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [isLogged, setIsLogged] = useState(false);
+  const [username, setUsername] = useState(null);
 
   useEffect(() => {
     if (localStorage.getItem("name")) {
+      setUsername(() => localStorage.getItem("name"));
       setIsLogged(() => true);
     } else {
+      setUsername(() => null);
       setIsLogged(() => false);
     }
   }, []);

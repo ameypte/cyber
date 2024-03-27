@@ -23,6 +23,8 @@ export default function page() {
       if (data.user) {
         setMessage("");
         localStorage.setItem("name", data.user[0].name);
+        localStorage.setItem("user_id", data.user[0].id);
+        localStorage.setItem("email", data.user[0].email);
         router.push("/");
       } else {
         setMessage(data.message);

@@ -40,15 +40,14 @@ export default function page() {
       </div>
 
       <div className="w-full md:w-2/3 mx-auto">
-        <iframe
+       <iframe
           width="100%"
           height="450"
-          src="https://www.youtube.com/embed/NVjr_PkdYLw"
-          title="Remote Work Security Video"
-          frameBorder="0"
+          src="https://www.youtube.com/embed/F-U_7CGYiHQ?si=odsL7AZrpSkUs9o9"
+          title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div className="mb-8 mt-8" id="common-remote-work-security-risks">

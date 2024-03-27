@@ -1,7 +1,38 @@
 import React, { useEffect, useState } from "react";
 
-export default function FinishedScreen({ ResetQuiz, correct = 0, length = 4 }) {
-  const [restartQuiz, setRestartQuiz] = useState(false);
+export default function FinishedScreen({ ResetQuiz, correct, length }) {
+
+  const storeScore = async () => {
+    const data = {
+      user_id: 1,
+      module: "Phishing",
+      total: length,
+      correct: correct,
+    };
+
+    const response = await fetch("/api/scores", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      console.log("Score saved successfully");
+    } else {
+      console.log("Failed to save score");
+    }
+  };
+
+  useEffect(() => {
+    storeScore();
+  }
+    , []);
+
+
+
+
   return (
     <div className={`result-modal `}>
       <p className="result text-center w-75 bg-orange-500">

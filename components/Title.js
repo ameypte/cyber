@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Title() {
   return (
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+    <div class="pb-8  px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 pt-[-8rem]">
       <h2 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
         Empower Your Cybersecurity Knowledge
       </h2>

@@ -1,6 +1,11 @@
-export default function IntoBanner() {
+export default function IntoBanner(username) {
+  console.log(username.username);
   return (
-    <section className="flex bg-white dark:bg-gray-900 max-w-screen-xl mx-auto p-8 md:p-12 lg:p-20">
+    <section
+      className={`flex bg-white dark:bg-gray-900 max-w-screen-xl mx-auto p-8 md:p-12 lg:p-20 ${
+        username.username === null ? "lg:pb-0" : ""
+      }`}
+    >
       <div className="w-[100%]">
         <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           Building a Secure <br />{" "}

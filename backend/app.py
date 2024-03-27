@@ -32,7 +32,7 @@ def generate_certificate_api():
     
     if os.path.exists(absolute_path):
         response = send_file(absolute_path, as_attachment=True)
-        os.remove(absolute_path)  # Remove the file after sending
+         # Remove the file after sending
         return response
     else:
         return render_template('error.html'), 404

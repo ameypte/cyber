@@ -1,6 +1,7 @@
 "use client";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
+import GetCertificateButton from "@/components/GetCertificateButton";
 import IntoBanner from "@/components/IntroBanner";
 import NavBar from "@/components/NavBar";
 import ProgressBar from "@/components/ProgressBar";
@@ -9,11 +10,13 @@ import Title from "@/components/Title";
 import { useState, useEffect } from "react";
 export default function Home() {
   const [username, setUsername] = useState(null);
+  const [progress, setProgress] = useState(100);
   try {
     if (localStorage.getItem("name")) {
       useEffect(() => {
         if (localStorage.getItem("name")) {
           setUsername(localStorage.getItem("name").split(" ")[0]);
+          localStorage.setItem("fullname", localStorage.getItem("name"));
         }
       }, []);
     }
@@ -26,7 +29,12 @@ export default function Home() {
       <IntoBanner username={username} />
       {/* <hr /> */}
       <div className="max-w-screen-xl mx-auto">
-        {username ? <ProgressBar progress={50} /> : null}
+        {username ? <ProgressBar progress={progress} /> : null}
+        {username && progress == 100 && (
+          <div className="flex justify-center items-center p-4">
+            <GetCertificateButton />
+          </div>
+        )}
         <Title />
         <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
           <Card

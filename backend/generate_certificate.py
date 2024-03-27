@@ -3,6 +3,7 @@ import cv2
 from flask import jsonify
 # pip install opencv-python
 def generate_certificate(name):
+    print(name)
     name2 = name
     updated_name = name2.split()
     if not updated_name:    

@@ -29,6 +29,6 @@ def generate_certificate(name):
     cv2.putText(template,name2,(x_coordinate,800),cv2.FONT_ITALIC,1.8,(0,0,0),2,cv2.LINE_AA)
     # cv2.putText(template, name2, (628, 800), cv2.FONT_HERSHEY_SIMPLEX + cv2.FONT_WEIGHT_BOLD, 1.5, (0, 0, 255), 1, cv2.LINE_AA)
 
-    cv2.imwrite(f"./data/{name2}.png",template)
+    cv2.imwrite(f"./data/certificate.png",template)
     print("Certificate GEnerated")
     return jsonify({"success":"Certificate GEnerated"})

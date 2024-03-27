@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 import IntoBanner from "@/components/IntroBanner";
@@ -21,10 +21,10 @@ export default function Home() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       <NavBar />
-      <IntoBanner />
+      <IntoBanner username={username} />
       {/* <hr /> */}
       <div className="max-w-screen-xl mx-auto">
-        <ProgressBar progress={50} />
+        {username ? <ProgressBar progress={50} /> : null}
         <Title />
         <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-3">
           <Card

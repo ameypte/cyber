@@ -9,7 +9,7 @@ export default function page() {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             Incident Response
           </h1>
-          <ModuleStatus module={"Incident Response"} />
+          <ModuleStatus module={"Incidence Response"} />
         </div>
         <p className="my-3 text-base text-gray-600 dark:text-gray-400">
           Let's learn about incident response and how to effectively manage and

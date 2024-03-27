@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [isLogged, setIsLogged] = useState(false);
   const [username, setUsername] = useState(null);
-  const [progress, setProgress] = useState(100);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (localStorage.getItem("name")) {
@@ -21,7 +21,25 @@ export default function Home() {
       setUsername(() => null);
       setIsLogged(() => false);
     }
+
+    getProgress();
   }, []);
+
+  const getProgress = async () => {
+    const user_id = localStorage.getItem("user_id");
+    const totalModules = 6;
+
+    const response = await fetch("/api/progress", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ user_id, totalModules }),
+    });
+
+    const data = await response.json();
+    setProgress(() => data.progress);
+  };
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900">

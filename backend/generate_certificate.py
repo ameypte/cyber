@@ -13,7 +13,7 @@ def generate_certificate(name):
     print(length_sum)
 
     if length_sum>18:
-        x_coordinate = 700
+        x_coordinate = 600
     if length_sum >= 15 and length_sum <=18:
         x_coordinate = 740
     elif length_sum >= 13 and length_sum<15:

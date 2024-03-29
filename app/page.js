@@ -63,28 +63,27 @@ export default function Home() {
           <Card
             img={"/img4.jpg"}
             title={"Password Security"}
-            link={isLogged ? "/training/password" : "/login"}
-          />
-          <Card
-            img={"/img6.jpg"}
-            title={"Social Engineering"}
-            link={isLogged ? "/training/social" : "/login"}
+            link={isLogged ? "/training/pass-security" : "/login"}
           />
           <Card
             img={"/dataprotection.jpg"}
             title={"Data Protection"}
-            link={isLogged ? "/training/data" : "/login"}
+            link={isLogged ? "/training/data-protection" : "/login"}
           />
-
+          <Card
+            img={"/img6.jpg"}
+            title={"Social Engineering"}
+            link={isLogged ? "/training/social-engg" : "/login"}
+          />
           <Card
             img={"/incidence.jpg"}
             title={"Incidence Response"}
-            link={isLogged ? "/training/incidence" : "/login"}
+            link={isLogged ? "/training/incidence-res" : "/login"}
           />
           <Card
             img={"/remote.jpg"}
             title={"Remote Work Security"}
-            link={isLogged ? "/training/remote" : "/login"}
+            link={isLogged ? "/training/remote-work" : "/login"}
           />
         </div>
       </div>

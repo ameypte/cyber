@@ -2,11 +2,14 @@
 import { React, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 export default function page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(true);
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -92,16 +95,30 @@ export default function page() {
                 >
                   Password
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  required=""
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="flex">
+                  <input
+                    type= {showPassword ? "password" : "text"}
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    class="bg-gray-50 border rounded-l-lg border-gray-300 text-gray-900 sm:text-sm  focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    required=""
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <button type="button" class="text-white rounded-r-lg bg-blue-700 hover:bg-blue-800 font-medium text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none ">
+
+                    {showPassword ? (
+                      <FaEyeSlash
+                        onClick={() => setShowPassword(!showPassword)}
+                      />
+                    ) : (
+                      <FaEye onClick={() => setShowPassword(!showPassword)} />
+                    )}
+
+                  </button>
+                </div>
+
               </div>
               <div class="flex items-center justify-between">
                 <div class="flex items-start">

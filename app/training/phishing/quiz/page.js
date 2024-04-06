@@ -80,7 +80,7 @@ export default function page() {
       )}
 
       {showModal ? (
-        <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} module={"Phishing"} userId={user_id} />
+        <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} module={"Phishing"} userId={user_id}  PhishingData={PhishingData} />
       ) : (
         ""
       )}

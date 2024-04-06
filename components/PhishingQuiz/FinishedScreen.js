@@ -1,7 +1,9 @@
+import { getRequestMeta } from "next/dist/server/request-meta";
 import React, { useEffect, useState } from "react";
+import Question from "./Question";
 
 export default function FinishedScreen({ ResetQuiz, correct, length,
-  module, userId
+  module, userId, PhishingData
 }) {
 
   const storeScore = async () => {
@@ -27,12 +29,11 @@ export default function FinishedScreen({ ResetQuiz, correct, length,
     }
   };
 
+
   useEffect(() => {
     storeScore();
   }
     , []);
-
-
 
 
   return (
@@ -41,13 +42,30 @@ export default function FinishedScreen({ ResetQuiz, correct, length,
         You Scored <strong>{correct}</strong> out of {length}
       </p>
       {correct >= length / 2 ? (
-        <div
-          class="result2 p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
-          role="alert"
-        >
-          <span class="font-medium">Success !</span> You Passed the Round You
-          can proceed to next round
-        </div>
+        <>
+          {/* display all the answers */}
+
+          {PhishingData.questions.map((question, index) => {
+            return (
+              <Question
+                key={index}
+                question={question}
+                correctAnswer={question.correctOption}
+                answer={question.answer}
+              />
+
+
+            );
+          })}
+
+          <div
+            class="result2 p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+            role="alert"
+          >
+            <span class="font-medium">Success !</span> You Passed the Round You
+            can proceed to next round
+          </div>
+        </>
       ) : (
         <div
           class="result2 p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"

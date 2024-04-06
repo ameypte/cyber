@@ -23,13 +23,7 @@ export default function Options({
             answer !== null && index === question.correctOption - 1
               ? "answer"
               : ""
-          } ${
-            answer !== null
-              ? index === question.correctOption - 1
-                ? "correct"
-                : "wrong"
-              : ""
-          }`}
+          } ${answer !== null ? index === question.correctOption - 1 : ""}`}
         >
           {console.log(
             question.question,

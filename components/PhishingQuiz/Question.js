@@ -10,7 +10,6 @@ export default function Question({
   correctAnswer,
   setAnswer,
   setCurrentQuestion,
-  finishedScreen,
 }) {
   console.log(question);
   return (
@@ -27,7 +26,6 @@ export default function Question({
           setAnswer={setAnswer}
           totalPoints={totalPoints}
           transfer={true}
-          finishedScreen={finishedScreen}
           setCurrentQuestion={setCurrentQuestion}
         />
       ) : (
@@ -39,7 +37,6 @@ export default function Question({
           setAnswer={setAnswer}
           totalPoints={totalPoints}
           transfer={false}
-          finishedScreen={finishedScreen}
           setCurrentQuestion={setCurrentQuestion}
         />
       )}

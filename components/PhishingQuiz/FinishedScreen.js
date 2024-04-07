@@ -2,14 +2,10 @@ import { getRequestMeta } from "next/dist/server/request-meta";
 import React, { useEffect, useState } from "react";
 import Question from "./Question";
 
-export default function FinishedScreen({
-  ResetQuiz,
-  correct,
-  length,
-  module,
-  userId,
-  PhishingData,
+export default function FinishedScreen({ ResetQuiz, correct, length,
+  module, userId, PhishingData
 }) {
+
   const storeScore = async () => {
     const data = {
       user_id: userId,
@@ -33,9 +29,12 @@ export default function FinishedScreen({
     }
   };
 
+
   useEffect(() => {
     storeScore();
-  }, []);
+  }
+    , []);
+
 
   return (
     <div className={`result-modal `}>
@@ -53,8 +52,9 @@ export default function FinishedScreen({
                 question={question}
                 correctAnswer={question.correctOption}
                 answer={question.answer}
-                finishedScreen={true}
               />
+
+
             );
           })}
 

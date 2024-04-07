@@ -6,7 +6,6 @@ export default function Options({
   totalPoints,
   setAnswer,
   setCurrentQuestion,
-  finishedScreen,
 }) {
   function ChangeStates(index) {
     totalPoints((preVal) => preVal + 1);
@@ -22,11 +21,7 @@ export default function Options({
             answer === null ? "float_right_options" : ""
           } radio-btn ${
             answer !== null && index === question.correctOption - 1
-              ? "answer" &&
-                (finishedScreen == true &&
-                (finishedScreen !== undefined || finishedScreen !== null)
-                  ? "correct"
-                  : "")
+              ? "answer"
               : ""
           } ${answer !== null ? index === question.correctOption - 1 : ""}`}
         >

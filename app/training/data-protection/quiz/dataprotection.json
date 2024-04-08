@@ -9,7 +9,7 @@
         "C. Deleting all data from a computer",
         "D. Sharing data with everyone online"
       ],
-      "correctOption": 1,
+      "correctOption": 2,
       "points": 20
     },
     {
@@ -20,7 +20,7 @@
         "C. Storing all data on a public server",
         "D. Ignoring software updates"
       ],
-      "correctOption": 1,
+      "correctOption": 2,
       "points": 20
     },
     {
@@ -31,7 +31,7 @@
         "C. Sharing all personal data openly",
         "D. Disabling all security settings"
       ],
-      "correctOption": 1,
+      "correctOption": 2,
       "points": 20
     },
     {
@@ -42,7 +42,7 @@
         "C. Share the information on social media",
         "D. Delete all related files and logs"
       ],
-      "correctOption": 1,
+      "correctOption": 2,
       "points": 20
     }
   ]

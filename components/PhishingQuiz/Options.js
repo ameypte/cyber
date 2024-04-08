@@ -6,6 +6,7 @@ export default function Options({
   totalPoints,
   setAnswer,
   setCurrentQuestion,
+  isDisplay = false,
 }) {
   function ChangeStates(index) {
     totalPoints((preVal) => preVal + 1);
@@ -23,7 +24,7 @@ export default function Options({
             answer !== null && index === question.correctOption - 1
               ? "answer"
               : ""
-          } ${answer !== null ? index === question.correctOption - 1 : ""}`}
+          } ${isDisplay && answer !== null ? index === question.correctOption - 1  ? "correct" : "" : ""}`}
         >
           {console.log(
             question.question,

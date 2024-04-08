@@ -10,6 +10,7 @@ export default function Question({
   correctAnswer,
   setAnswer,
   setCurrentQuestion,
+  isDisplay = false,
 }) {
   console.log(question);
   return (
@@ -27,6 +28,7 @@ export default function Question({
           totalPoints={totalPoints}
           transfer={true}
           setCurrentQuestion={setCurrentQuestion}
+          isDisplay={isDisplay}
         />
       ) : (
         <Options
@@ -38,6 +40,7 @@ export default function Question({
           totalPoints={totalPoints}
           transfer={false}
           setCurrentQuestion={setCurrentQuestion}
+          isDisplay={isDisplay}
         />
       )}
     </div>

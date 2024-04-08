@@ -81,6 +81,7 @@ export default function page() {
       {showModal ? (
         <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} module={"Social Engineering"} 
         userId={user_id}
+        PhishingData={SocialEngg}
         />
        ) : (
         ""

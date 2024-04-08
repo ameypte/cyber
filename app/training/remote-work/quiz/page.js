@@ -83,6 +83,7 @@ export default function page() {
       {showModal ? (
         <FinishedScreen correct={point} length={length} ResetQuiz={ResetQuiz} module="Remote Work"
           userId={user_id}
+          PhishingData={RemoteWork}
         />
       ) : (
         ""

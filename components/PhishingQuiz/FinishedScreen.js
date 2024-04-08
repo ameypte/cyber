@@ -32,6 +32,7 @@ export default function FinishedScreen({ ResetQuiz, correct, length,
 
   useEffect(() => {
     storeScore();
+    console.log("PhishingData.questions: ", PhishingData.questions);
   }
     , []);
 
@@ -51,10 +52,9 @@ export default function FinishedScreen({ ResetQuiz, correct, length,
                 key={index}
                 question={question}
                 correctAnswer={question.correctOption}
-                answer={question.answer}
+                answer={question.correctOption}
+                isDisplay={true}
               />
-
-
             );
           })}
 

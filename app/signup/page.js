@@ -121,7 +121,7 @@ export default function page() {
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Already have an account?{" "}
                 <Link
-                  href="/auth/login"
+                  href="/login"
                   className="font-medium text-orange-600 hover:underline dark:text-orange-500"
                 >
                   Sign in
